@@ -6,91 +6,107 @@
     <title>Weather App- by Aayush Bharti</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
-
-        <h1>Weather App</h1>
-
-        <div class="tab-container">
-            <p class="tab" data-userWeather>Your Weather</p>
-            <p class="tab" data-searchWeather>Search Weather</p>
-        </div>
-
-        <div class="weather-container">
-
-            <!-- grant location container-->
-            <div class="grant-location-container sub-container">
-                <img src="./assets/location.png" width="80" height="80" loading="lazy">
-                <p>Grant Location Access</p>
-                <p>Allow Access to get weather Information</p>
-                <button class="btn" data-grantAccess>Grant Access</button>
+        <div class="outerContainer">
+            <h1>The Weather App</h1>
+            <div class="tab-container">
+                <p class="tab" data-userWeather>Your Weather</p>
+                <p class="tab" data-searchWeather>Search Weather</p>
             </div>
-
-            <!-- search form -->
-            <form class="form-container" data-searchForm>
-                <input placeholder="Search for City..." data-searchInput>
-                <button class="btn" type="submit">
-                    <img src="./assets/search.png"  width="20" height="20" loading="lazy">
-                </button>
-            </form>
-
-            <!--- loading screen container -->
-            <div class="loading-container sub-container">
-                <img src="./assets/loading.gif" width="150" height="150">
-                <p>Loading</p>
-            </div>
-
-
-
-
-            <!-- show weather info -->
-            <div class="user-info-container sub-container">
-
-                <!--city name and Flag-->
-                <div class="name">
-                    <p data-cityName></p>
-                    <img data-countryIcon>
+    
+            <div class="weather-container">
+    
+                <!-- grant location container-->
+                <div class="grant-location-container sub-container">
+                    <img src="./assets/location.png" width="80" height="80" loading="lazy">
+                    <p>Grant Location Access</p>
+                    <p>Allow Access to get weather Information</p>
+                    <button class="btn" data-grantAccess>Grant Access</button>
                 </div>
- 
-
-                <p data-weatherDesc></p>
-
-                <img data-weatherIcon>
-
-                <p data-temp></p>
-
-                <!--3 cards -->
-                <div class="card-container">
-
-                    <!--card 1-->
-                    <div class="card">
-                        <img src="./assets/wind.png" >
-                        <p>Windspeed</p>
-                        <p data-windspeed></p>
-                    </div>
-
-                    <!--card 2-->
-                    <div class="card">
-                        <img src="./assets/humidity.png" >
-                        <p>Humidity</p>
-                        <p data-humidity></p>
-                    </div>
-
-                    <!--card 3-->
-                    <div class="card">
-                        <img src="./assets/cloud.png" >
-                        <p>Clouds</p>
-                        <p data-cloudiness></p>
-                    </div>
-
+    
+                <!-- search form -->
+                <form class="form-container" data-searchForm >
+                    <input placeholder="Search for City..." data-searchInput>
+                    <button class="btn" type="submit">
+                        <img src="./assets/search.png"  width="20" height="20" loading="lazy">
+                    </button>
+                </form>
+    
+                <!--- loading screen container -->
+                <div class="loading-container sub-container">
+                    <img src="./assets/loading.gif" width="150" height="150">
+                    <p>Loading...</p>
                 </div>
+    
+    
+                <!-- show weather info -->
+                <div class="user-info-container sub-container">
+                    
+                    <div class="temperature">
+                        <p data-temp></p>
+                        <p>° C</p>
+                    </div>
+                    
+                    <div class="desc">
+                        <p data-weatherDesc></p>
+                        <div class="minMaxTemp">
+                            <p data-tempMax></p> 
+                            <p style="opacity: 40%;"> / </p>
+                            <p data-tempMin></p>
+                        </div>
+                    </div>
 
+                    <!-- <img data-weatherIcon> -->
+    
+                    <!--city name and Flag-->
+                    <div class="name">
+                        <p data-cityName></p>
+                        <p data-countryId></p>
+                        <img data-countryIcon>
+                    </div>
+    
+                    <!--3 cards -->
+                    <div class="card-container">
+    
+                        <!--card 1-->
+                        <div class="card">
+                            <img src="./assets/wind.png" >
+                            <p>Windspeed</p>
+                            <p data-windspeed></p>
+                        </div>
+    
+                        <!--card 2-->
+                        <div class="card">
+                            <img src="./assets/humidity.png" >
+                            <p>Humidity</p>
+                            <p data-humidity></p>
+                        </div>
+    
+                        <!--card 3-->
+                        <div class="card">
+                            <img src="./assets/cloud.png" >
+                            <p>Clouds</p>
+                            <p data-cloudiness></p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
             </div>
-
         </div>
+        <footer class="footer">
+            
+            <span class="aayush"> - by Aayush Bharti</span>
+        </footer>
 
     </div>
+
 
     <script src="script.js"></script>
 </body>
