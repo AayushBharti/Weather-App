@@ -78,7 +78,7 @@ h1 {
 
 .weather-container{
     /* margin-block:4rem; */
-    margin-top: 4em;
+    margin-top: 3.5em;
 }
 
 .btn{
@@ -135,18 +135,21 @@ h1 {
 }
 
 .loading-container p{
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 
 .user-info-container{
     display:none;
+    position: relative;
+    justify-content: center;
+    position: relative;
+    align-items: center;
 }
 
 .user-info-container.active{
     display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
 
 /* .user-info-container img{
@@ -155,14 +158,29 @@ h1 {
 } */
 
 .temperature{
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    /* background-color: red; */
+    gap: 1em;
 }
 
 .temperature p[data-temp] {
     font-size:8em;
     font-weight:250;
+    overflow:visible;
+    padding: 0 1em;
+    /* background-color: red; */
+}
+
+.temperature p:last-child{
+    position: absolute;
+    top: 1em;
+    right: 2.2em;
+    font-size: 2em;
+    /* padding-top: 1.05em; */
+    font-weight: 600;
 }
 
 .desc{
@@ -241,7 +259,8 @@ h1 {
 
 .card p:first-of-type{
     font-size: 1em;
-    font-weight:600;
+    font-weight:500;
+    opacity: 80%;
     text-transform: uppercase;
 }
 
