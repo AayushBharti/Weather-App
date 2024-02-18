@@ -6,6 +6,7 @@ const searchForm = document.querySelector("[data-searchForm]");
 const loadingScreen = document.querySelector(".loading-container");
 const userInfoContainer = document.querySelector(".user-info-container");
 
+document.querySelector('video').playbackRate = 0.5;
 
 //initial variables
 let currentTab = userTab;

@@ -13,13 +13,31 @@
     --colorDark2: #3F72AF;
     --colorLight1: #DBE2EF;
     --colorLight2: #F9F7F7;
+    background-color: black;
+    background-color: black;
 }
 
-.wrapper{
+.bgVideo{
+    background-position: center;
+    background-size:cover;
+    position: absolute;
+    /* width: 100%; */
+    height: 100%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.heroSection{
     width:100vw;
+    height: 100vh;
     height: auto;
     color: var(--colorLight2);
-    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    /* background-color: black; */
+    /* background-image: url(./pexels-travis-blessing-1363876.jpg); */
+    background-size: cover;
+    /* background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%); */
     padding-bottom: 1px;
 }
 
@@ -62,18 +80,22 @@ h1 {
     padding: 0.6em 2em;
     background-color: rgba(219, 226, 239, 0.108);
     border-radius: 30px;
-    transition: 0.3s
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
 }
 
 .tab:hover{
     background-color: rgba(219, 226, 239, 0.158);
     border-radius: 30px;
+    backdrop-filter: blur(10px);
 
 }
 
 .tab.current-tab{
     background-color: rgba(219, 226, 239, 0.235);
     border-radius: 30px;
+    backdrop-filter: blur(10px);
+
 }
 
 .weather-container{
@@ -207,6 +229,7 @@ h1 {
     align-items: center;
     gap: 0 1em;
     margin-top: 1rem;
+    /* filter: drop-shadow(10px); */
 }
 
 .name p{
@@ -293,6 +316,8 @@ h1 {
     background-color:rgba(219, 226, 239, 0.164);
     border-radius: 300px;
     margin: 0.7em;
+    backdrop-filter: blur(10px);
+
 }
 
 .form-container input::placeholder{
@@ -315,6 +340,7 @@ h1 {
 }
 
 .footer{
+    padding-top: 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
