@@ -35,11 +35,13 @@ function switchTab(newTab){
         //kya search form wala container is invisible, if yes then make it visible
         userInfoContainer.classList.remove("active");
         grantAccessContainer.classList.remove("active");
+        loadingScreen.classList.remove("active");
         searchForm.classList.add("active");
     }
     else {
         searchForm.classList.remove("active");
         userInfoContainer.classList.remove("active");
+        loadingScreen.classList.remove("active");
         //ab main your weather tab me aagya hu, toh weather bhi display karna poadega, so let's check local storage first
         //for coordinates, if we haved saved them there.
         getfromSessionStorage();
@@ -75,6 +77,7 @@ async function fetchUserWeatherInfo(coordinates){
     }
     catch(err) {
         loadingScreen.classList.remove("active"); 
+        alert("unexpected error")
         // console.log(err);
     }
 }
@@ -156,6 +159,7 @@ async function fetchSearchWeatherInfo(city){
         loadingScreen.classList.remove("active");
         userInfoContainer.classList.add("active");
         renderWeatherInfo(data);
+        searchInput.value=null;
     }
     catch(err) {
         //hW
